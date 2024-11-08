@@ -6,9 +6,9 @@
 </head>
 <body>
 <h1>Магазин</h1>
-    <ul><li>Орхидеи <button>Купить</button></li>
-    <li>Гортензии <button>Купить</button></li>
-    <li>Тюльпаны <button>Купить</button></li></ul>
+    {% for i in flowers %}
+        <p>{{ i }} <button>Купить</button></p>
+    {% endfor %}
 <a href="/main"><button>Вернуться обратно</button></a>
 </body>
 </html>

@@ -3,6 +3,10 @@ from django.views.generic import TemplateView
 
 # Create your views here.
 # def index(request):
+    flowers = ['Орхидеи', 'Гортензии', 'Тюльпаны']
+    context = {
+        'flowers': flowers
+    }
 #     return render(request, 'second_task/func_template.html')
 
 

@@ -15,13 +15,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.template.defaulttags import url
 from django.urls import path
-from task3.views import index_main, index_shop, index_trash
+from task4.views import index_main, index_shop, index_trash
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", index_main),      # где прочерк - главная страница
-    path("main/", index_main),
-    path("shop/", index_shop),
-    path("trash/", index_trash)
+    path("main/", index_main, name='main_page'),
+    path("shop/", index_shop, name='shop'),
+    path("trash/", index_trash, name='trash')
 ]
+
+# url(r'^blog/$', 'module.views.blog', name='blog')

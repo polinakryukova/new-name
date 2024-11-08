@@ -1,0 +1,14 @@
+{% extends "/Volumes/сан санна/untitled folder/new-name/UrbanDjango/templates/fourth_task/menu.html" %}
+
+{% block pagename %} Магазин {% endblock %}
+
+    {% block menu %}
+    {{ block.super }}
+    {% endblock %}
+
+    {% block content %}
+    {% for i in flowers %}
+        <p>{{ i }} <button>Купить</button></p>
+    {% endfor %}
+    {% endblock %}
+

@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from task3.views import index_main, index_shop, index_trash
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", index_main),      # где прочерк - главная страница
+    path("main/", index_main),
+    path("shop/", index_shop),
+    path("trash/", index_trash)
 ]

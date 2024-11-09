@@ -23,7 +23,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", sign_up_by_html),      # где прочерк - главная страница
     path("django_sign_up/", sign_up_by_django),
-
 ]
 
 # url(r'^blog/$', 'module.views.blog', name='blog')

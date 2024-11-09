@@ -17,14 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.template.defaulttags import url
 from django.urls import path
-from task4.views import index_main, index_shop, index_trash
+from task5.views import sign_up_by_html, sign_up_by_django
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", index_main),      # где прочерк - главная страница
-    path("main/", index_main, name='main_page'),
-    path("shop/", index_shop, name='shop'),
-    path("trash/", index_trash, name='trash')
+    path("", sign_up_by_html),      # где прочерк - главная страница
+    path("django_sign_up/", sign_up_by_django),
+
 ]
 
 # url(r'^blog/$', 'module.views.blog', name='blog')
